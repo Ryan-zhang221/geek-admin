@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="todoList" @click="showMouse">
     <h2 @click="add">{{count}}</h2>
     <input type="text" v-model="title" @keydown.enter="addTodo" />
     <button v-if="active < all" @click="clear">清理</button>
-    <ul v-if="todos.length" @click="showMouse">
+    <ul v-if="todos.length">
       <li v-for="todo in todos">
         <input type="checkbox" v-model="todo.done" />
         <span :class="{ done: todo.done }">{{todo.title}}</span>
@@ -20,6 +20,7 @@
 <script setup>
   import { ref, computed } from 'vue'
   import { useMouse } from '../utils/mouse.js'
+  import { useStorage } from '../utils/use.js'
 
   let count = ref(1)
   let color = ref('red')
@@ -38,7 +39,7 @@
 
   function useTodos() {
     let title = ref('')
-    let todos = ref([{title: 'learn', done: false}])
+    let todos = useStorage('todos', [])
     function addTodo() {
       todos.value.push({
         title: title.value,
@@ -72,6 +73,9 @@
 <style scoped>
   h2 {
     color: v-bind(color);
+  }
+  .todoList {
+    border:1px solid #bfa;
   }
 </style>
 

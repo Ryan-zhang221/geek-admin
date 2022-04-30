@@ -8,12 +8,22 @@
 
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: salmon;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background: #282c34;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
 }
 </style>
