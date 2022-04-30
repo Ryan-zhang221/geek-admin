@@ -1,7 +1,7 @@
 <template>
   <h2>这是关于页面</h2>
   <button @click="toggle">全屏切换</button>
-  <Rate :value="score"></Rate>
+  <Rate :value="5"></Rate>
   <Rate :value="score" theme="green"></Rate>
   <Rate :value="score" theme="yellow"></Rate>
 </template>
