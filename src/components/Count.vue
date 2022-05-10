@@ -2,6 +2,9 @@
   <div @click="add">
     {{count}} / {{double}}
   </div>
+  <section>
+    <button @click="asyncAdd">asyncAdd</button>
+  </section>
 </template>
 
 <script setup>
@@ -20,6 +23,12 @@
   // add函数是用来修改数据，我们不能直接去操作store.state.count += 1，因为这个数据
   // 属于vuex统一管理，我们需要使用store.commit('add')去触发vuex中的mutation去修改数据
   function add() {
+    console.log('123')
     store.commit('add')
+  }
+
+  // 使用actions异步处理数据
+  function asyncAdd() {
+    store.dispatch('asyncAdd')
   }
 </script>
