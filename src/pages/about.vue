@@ -10,6 +10,8 @@
   <Rate :value="score" @update-rate="update">
     <img src="../assets/logo.png" alt="" width="14">
   </Rate>
+
+  <Count></Count>
 </template>
 
 
@@ -17,6 +19,7 @@
 <script setup>
   import { ref } from 'vue'
   import Rate from '../components/Rate.vue'
+  import Count from '../components/Count.vue'
 
   import { useFullscreen } from '@vueuse/core'
 
