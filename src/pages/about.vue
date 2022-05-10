@@ -7,8 +7,9 @@
   <Rate :value="score" @update-rate="update" theme="white"></Rate>
   <Rate :value="score" @update-rate="update" theme="blue"></Rate>
   <Rate :value="score" @update-rate="update"></Rate>
-  <Rate :value="score" @update-rate="update"></Rate>
-  <Rate :value="score" @update-rate="update"></Rate>
+  <Rate :value="score" @update-rate="update">
+    <img src="../assets/logo.png" alt="" width="14">
+  </Rate>
 </template>
 
 

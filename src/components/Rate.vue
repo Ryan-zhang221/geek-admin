@@ -1,5 +1,6 @@
 <template>
   <div :style="fontstyle">
+    <slot></slot>
     <div class="rate" @mouseout="mouseOut">
       <span @mouseover="mouseOver(num)" v-for="num in 5" :key="num">☆</span>
       <span class="hollow" :style="fontwidth">
@@ -10,7 +11,7 @@
 </template>
 
 <script setup>
-  import { ref, computed, defineEmits } from 'vue'
+  import { ref, computed } from 'vue'
   let props = defineProps({
     value: Number,
     theme: { type: String, default: 'orange' }
