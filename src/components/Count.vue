@@ -1,6 +1,6 @@
 <template>
   <div @click="add">
-    {{count}}
+    {{count}} / {{double}}
   </div>
 </template>
 
@@ -14,6 +14,8 @@
   // 是store/index.js中定义的count
   let count = computed(() => store.state.count) 
 
+  // 获取getters中的值，vuex中的getters相当于vue中的computed
+  let double = computed(() => store.getters.double)
 
   // add函数是用来修改数据，我们不能直接去操作store.state.count += 1，因为这个数据
   // 属于vuex统一管理，我们需要使用store.commit('add')去触发vuex中的mutation去修改数据
