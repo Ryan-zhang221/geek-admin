@@ -26,7 +26,7 @@
     </div>
   </transition>
   <span class="dustbin">
-    🗑
+    <i class="iconfont icon-lajitong_"></i>
   </span>
   <div class="animate-wrap">
     <transition
@@ -35,7 +35,10 @@
       @after-enter="afterEnter"
     >
       <div class="animate" v-show="animate.show">
-        📋
+        <i
+          class="iconfont icon-zhifeiji"
+          style="font-size:20px;color:#87ceeb;"
+        ></i>
       </div>
     </transition>
   </div>
@@ -66,7 +69,7 @@
     let dom = animate.el
     let rect = dom.getBoundingClientRect()
     let x = window.innerWidth - rect.left - 60
-    let y = rect.top - 10
+    let y = rect.top - 40
     el.style.transform = `translate(-${x}px, ${y}px)`
   }
   function enter(el, done) {
@@ -141,6 +144,9 @@
 </script>
 
 <style scoped>
+.iconfont {
+    font-size: 73px;
+  }
   h2 {
     color: v-bind(color);
   }
@@ -150,7 +156,7 @@
   .todoList > input {
     width:200px;
     height: 30px;
-    border: none;
+    /* border: none; */
     border-radius: 5px;
     padding-left: 16px;
   }
@@ -196,8 +202,8 @@
   .flip-list-enter-from,
   .flip-list-leave-to { opacity: 0; transform: translateX(30px);}
   .remove-btn {cursor:pointer;}
-  .animate-wrap .animate{position :fixed; right :10px; top :0px; z-index: 100; transition: all 0.5s linear;}
+  .animate-wrap .animate{position :fixed; right :30px; top :30px; z-index: 100; transition: all 0.5s linear;}
 
-  .dustbin {position :fixed; right :0px; top :0px;font-size: 30px;}
+  .dustbin {position :fixed; right :20px; top :20px;font-size: 30px;}
 </style>
 

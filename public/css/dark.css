@@ -1,0 +1,23 @@
+/* 黑暗模式下的所有css */
+
+:root {
+  --text: #fff;
+  --background: #282c34;
+}
+
+body {
+  background-color: #282c34 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+ul,
+a {
+  color: var(--text) !important;
+}

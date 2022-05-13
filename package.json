@@ -14,7 +14,7 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.0",
+    "@vitejs/plugin-vue": "^2.3.3",
     "vite": "^2.9.0"
   }
 }

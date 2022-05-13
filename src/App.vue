@@ -2,10 +2,15 @@
   <div>
     <router-link to="/">首页</router-link> | 
     <router-link to="/about">关于</router-link>
+    <DarkSwitch />
   </div>
   <router-view></router-view>
 </template>
 
+<script setup>
+  import DarkSwitch from './components/DarkSwitch.vue'
+  // import DarkSwitch from './components/DarkSwitch.js'
+</script>
 
 <style>
 * {
@@ -20,10 +25,10 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  background: #282c34;
+  /* color: #2c3e50; */
+  /* background: #282c34; */
   width: 100%;
   height: 100vh;
-  color: #fff;
+  /* color: #fff; */
 }
 </style>
