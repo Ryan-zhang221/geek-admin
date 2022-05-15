@@ -143,15 +143,30 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$padding: 10px;
+$white: #fff;
+ul {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  li {
+    &:hover {
+      cursor:pointer;
+    }
+    border-radius: 6px;
+    list-style-type: none;
+    margin-bottom: $padding;
+    padding: $padding;
+    background: $white;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  }
+}
 .iconfont {
     font-size: 73px;
   }
   h2 {
     color: v-bind(color);
-  }
-  .todoList {
-    /* border:1px solid #bfa; */
   }
   .todoList > input {
     width:200px;
@@ -169,7 +184,6 @@
     margin-left: 8px;
   }
   .list {
-    width: 274px;
     height: auto;
     margin: 16px auto 0;
     list-style: none;

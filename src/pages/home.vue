@@ -10,8 +10,8 @@
   </transition>
   <Todolist />
 
-  <h3>jsx实现的todo清单</h3>
-  <Todo></Todo>
+  <!-- <h3>jsx实现的todo清单</h3>
+  <Todo></Todo> -->
 </template>
 
 <script setup>

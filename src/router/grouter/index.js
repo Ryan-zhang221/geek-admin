@@ -46,5 +46,5 @@ class Router {
   }
 }
 
-export {createRouter, createWebHashHistory, useRouter}
+export {Router, createRouter, createWebHashHistory, useRouter}
 
