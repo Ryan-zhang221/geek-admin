@@ -10,8 +10,11 @@
   <Rate :value="score" @update-rate="update">
     <img src="../assets/logo.png" alt="" width="14">
   </Rate>
-
   <Count></Count>
+
+  <!-- level为h1~h6级标签 -->
+  <Heading :level="1">hello world</Heading>
+
 </template>
 
 
@@ -20,6 +23,7 @@
   import { ref } from 'vue'
   import Rate from '../components/Rate.vue'
   import Count from '../components/Count.vue'
+  import Heading from '../components/Heading'
 
   import { useFullscreen } from '@vueuse/core'
 
