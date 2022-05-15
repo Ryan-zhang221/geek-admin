@@ -9,10 +9,14 @@
     <h2 v-if="showTitle">你好v3</h2>
   </transition>
   <Todolist />
+
+  <h3>jsx实现的todo清单</h3>
+  <Todo></Todo>
 </template>
 
 <script setup>
   import Todolist from '../components/Todolist.vue'
+  import Todo from '../components/Todo.jsx'
   import { ref } from 'vue'
 
   let width = ref(100)
