@@ -29,13 +29,16 @@
       </el-menu>
       <DarkSwitch />
     </el-header>
-    <el-container>
+    <el-container style="height:calc(100vh - 61px);">
       <el-aside width="200px">
         <div>
           <router-link to="/"> 首页 </router-link>
         </div>
         <div>
           <router-link to="/about"> 关于 </router-link>
+        </div>
+        <div>
+          <router-link to="/login"> 登录 </router-link>
         </div>
       </el-aside>
       <el-container>
