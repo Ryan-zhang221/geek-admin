@@ -9,7 +9,6 @@
 */
 
 import axios from 'axios'
-import store from '../store'
 import { getToken } from '../utils/auth'
 import { Message } from 'element3'
 
@@ -45,14 +44,14 @@ service.interceptors.response.use(
       return Promise.reject(new Error(res.data || 'Error'))
     }
     if (res.code !== 20000) {
-      console.log('接口信息报错', res.message)
+      console.log('接口信息报错111', res.message)
       return Promise.reject(new Error(res.message || 'Error'))
     } else {
       return res
     }
   },
   error => {
-    console.log('接口信息报错' + error)
+    console.log('接口信息报错222' + error)
     return Promise.reject(error)
   }
 )

@@ -37,9 +37,9 @@
         <div>
           <router-link to="/about"> 关于 </router-link>
         </div>
-        <div>
+        <!-- <div>
           <router-link to="/login"> 登录 </router-link>
-        </div>
+        </div> -->
       </el-aside>
       <el-container>
         <el-main>

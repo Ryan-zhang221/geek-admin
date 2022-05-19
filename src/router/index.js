@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../pages/home.vue'
 import About from '../pages/about.vue'
 import login from '../pages/Login.vue'
+import { getToken } from '../utils/auth'
 
 const routes = [
   {
@@ -26,6 +27,18 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  let token = getToken()
+  const { fullPath } = to
+  if (fullPath === '/login') {
+    next()
+  }
+  if (!token) {
+    next('/login')
+  }
+  next()
 })
 
 export default router
